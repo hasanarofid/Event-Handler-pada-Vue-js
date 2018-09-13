@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Handler Pada Vue Js | hasanarofid.com</title>
+</head>
+
+<body>
+    <p>EVENT HANDLER KLIK MOUSE DENGAN V-ON:CLICK</p>
+    <div id="app">
+        <button @click="pesan='EVENT HANDLER KLIK MOUSE DENGAN V-ON:CLICK' ">klik untuk melihat event</button>
+        <br> {{ pesan }}
+    </div>
+    <hr>
+
+    <p>V-ON:CLICK DENGAN METHODS</p>
+    <div id="app2">
+        <button @click="pesan2">klik untuk melihat event</button>
+    </div>
+
+    <p>EVENT HANDLER DENGAN TOMBOL ENTER</p>
+    <div id="app3">
+        <input type="text" @keyup.enter="hasil">
+
+    </div>
+    <p>EVENT HANDLER DENGAN TOMBOL-TOMBOL LAINNYA</p>
+    <div id="app4">
+        <input type="text" @keyup.enter="hasilenter" @keyup.esc="esc" @keyup.space="space" @keyup.up="up" @keyup.down="down" @keyup.right="right"
+            @keyup.left="left">
+        <br>
+        <p>{{hasilkeyup}}</p>
+    </div>
+    <hr>
+    <p>MOUSE HANDLER</p>
+    <div id="app5">
+        <input type="text" v-on:click.left="kiri">
+        <p>{{hasilmouse}}</p>
+    </div>
+
+    <hr>
+    <p>TOOGLE</p>
+    <div id="app6">
+        <button @click="tampak=!tampak">TOOGLE</button>
+        <b v-show="tampak">Tulisan Yang ditampilkan</b>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="apps.js"></script>
+</body>
+
+</html>
